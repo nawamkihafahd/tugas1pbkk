@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        
+
+    <bean id="s1" class="com.dhafa.zoo.Security">
+    
+    	<property name="gate" value="Eastern Gate"></property>
+        <property name="name" value="Dhafa"></property>
+        <property name="patrolsector" value="South Eastern Sector"></property>
+        <property name="ID" value="11"></property>
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+    
+    
+    <bean id="cs1" class="com.dhafa.zoo.CleaningService">
+    
+    	<property name="ID" value="21"></property>
+        <property name="name" value="Hikmawan"></property>
+        <property name="cleaningarea" value="Northern Area"></property>
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+    
+    <bean id="f1" class="com.dhafa.zoo.Fish"> 
+        <property name="name" value="Shark"></property>
+        <property name="watertype" value="Saltwater"></property>
+    </bean>
+    
+    <bean id="b1" class="com.dhafa.zoo.Bird"> 
+        <property name="name" value="Woodpecker"></property>
+        <property name="wingcolor" value="Green"></property>
+    </bean>
+    
+    <bean id="m1" class="com.dhafa.zoo.Mammal"> 
+        <property name="name" value="Cat"></property>
+        <property name="limbamount" value="4"></property>
+    </bean>
+    
+    <bean id="c1" class="com.dhafa.zoo.Caretaker">
+    
+    	<property name="ID" value="31"></property>
+        <property name="name" value="Dhafa Hikmawan"></property>
+        <property name="animal" ref="f1"></property>
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+</beans>
